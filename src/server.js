@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 import routes from './routes'
 
 export function start() { // eslint-disable-line import/prefer-default-export
-  const PORT = process.env.PORT || 3000
+  const PORT = process.env.PORT || 3001
   const ROOT_DIR = path.resolve(__dirname, '../')
 
   const app = express()
