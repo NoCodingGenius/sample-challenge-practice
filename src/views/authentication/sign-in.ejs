@@ -1,5 +1,17 @@
 <% include ../partials/header %>
 
-<!-- insert code here -->
+<h1>Sign-In</h1>
+
+<form class="sign-in-form" action="/sign-in" method="post">
+
+  <label for="email">Username:</label>
+  <input type="text" name="email" placeholder="Email" required>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" name="password" placeholder="password" required>
+  <br>
+  <input type="submit" name="sign-in-button" value="Submit">
+
+</form>
 
 <% include ../partials/footer %>

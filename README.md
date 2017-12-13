@@ -75,15 +75,15 @@ Files to modify:
 ## Sign in
 
 Routing:
-- [ ] __20:__ Navigating to `/sign-in` loads the sign in page.
+- [x] __20:__ Navigating to `/sign-in` loads the sign in page.
 
 Users can:
-- [ ] __20:__ Sign in to an existing account with an email address and password.
-- [ ] __10:__ Be redirected to the home page (`/`) after signing in.
+- [x] __20:__ Sign in to an existing account with an email address and password.
+- [x] __10:__ Be redirected to the home page (`/`) after signing in.
 
 Users CANNOT:
 
-- [ ] __30:__ Sign in with an invalid email address and password combination.
+- [x] __30:__ Sign in with an invalid email address and password combination.
 
 Files to modify:
 - `src/routes/authentication.js`
