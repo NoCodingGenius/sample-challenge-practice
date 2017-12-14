@@ -6,7 +6,7 @@ describe('function signUp ', () => {
   it('should create a new row in the users table', () => {
     return signUp({
       full_name: "Jahri",
-      email: "jahriB@test.com",
+      email: "jahriB@test.com",//Must change each time to properly run test
       password: "12345"
     })
     .then((user) => {
