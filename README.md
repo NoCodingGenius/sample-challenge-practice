@@ -102,8 +102,8 @@ Files to modify:
 ## Profile
 
 Routing:
-- [ ] __20:__ Navigating to `/users/<USER ID>` loads the profile page. The profile page has a button `Edit` which when clicked, navigates to the edit profile page.
-- [ ] __20:__ Navigating to `/users/<USER ID>/edit` loads the edit profile page.
+- [x] __20:__ Navigating to `/users/<USER ID>` loads the profile page. The profile page has a button `Edit` which when clicked, navigates to the edit profile page.
+- [x] __20:__ Navigating to `/users/<USER ID>/edit` loads the edit profile page.
 - [ ] __20:__ Sending a PUT request to `/users/<USER ID>` updates the profile of the user
 
 Users can:
