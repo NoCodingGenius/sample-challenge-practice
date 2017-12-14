@@ -7,9 +7,9 @@ document.getElementById("update-profile-button")
     return document.querySelector(className).value
   }
 
-  const full_name = getElementValue('user-full-name')
-  const email = getElementValue('user-email')
-  const userId = getElementValue('user-id')
+  const full_name = getElementValue('.user-full-name')
+  const email = getElementValue('.user-email')
+  const userId = getElementValue('.user-id')
 
   const url = `/users/${userId}`
 
@@ -21,5 +21,10 @@ document.getElementById("update-profile-button")
       'Content-Type': 'application/json'
     }
   })
+  .then(response => response.json())
+  .then((response) => {
+    window.location.pathname = response.REDIRECT_URL
+  })
+  .catch(console.log)
 
 })
