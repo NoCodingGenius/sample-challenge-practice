@@ -1,6 +1,7 @@
 <% include ../partials/header %>
 
 <h1>Edit Profile</h1>
+<form class="edit-profile" action="/users/<% user.id %>" method="post">
 
   <label for="full_name">Name: </label>
   <input class="user-full-name" type="text" name="full_name" value="<%= user.full_name%>">
@@ -11,6 +12,8 @@
 
   <input class="user-id" type="hidden" name="hidden-user-id" value="<%= user.id %>">
   <button id="update-profile-button" type="submit" name="update-profile-button">Submit</button>
+
+</form>
 
 
 <% include ../partials/footer %>

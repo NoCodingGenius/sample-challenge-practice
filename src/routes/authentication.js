@@ -19,14 +19,15 @@ router.post('/sign-up', (request, response, next) => {
 })
 
 router.get('/sign-in', (request, response, next) => {
-  response.render('authentication/sign-in')
+  response.render('authentication/sign-in', { redirectUrl: request.query.REDIRECT_URL })
 })
 
 router.post('/sign-in', (request, response, next) => {
   const { email, password } = request.body
   signIn(email, password)
   .then((validUser) => {
-    return response.redirect('/')
+    const redirectUrl = request.query.REDIRECT_URL || '/'
+    return response.redirect(redirectUrl)
   })
   .catch(next)
 })

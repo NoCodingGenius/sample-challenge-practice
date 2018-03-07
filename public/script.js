@@ -1,15 +1,14 @@
 console.log('hello from the browser JavaScript')
 
-document.getElementById("update-profile-button")
-.addEventListener('click', () => {
+document.getElementById('update-profile-button')
+.addEventListener('click', (event) => {
+  event.preventDefault()
 
-  function getElementValue(className) {
-    return document.querySelector(className).value
-  }
+  const full_name = document.querySelector('.user-full-name').value
+  const email = document.querySelector('.user-email').value
+  const userId = document.querySelector('.user-id').value
 
-  const full_name = getElementValue('.user-full-name')
-  const email = getElementValue('.user-email')
-  const userId = getElementValue('.user-id')
+  console.log("222", full_name, email, userId);
 
   const url = `/users/${userId}`
 
@@ -22,9 +21,6 @@ document.getElementById("update-profile-button")
     }
   })
   .then(response => response.json())
-  .then((response) => {
-    window.location.pathname = response.REDIRECT_URL
-  })
   .catch(console.log)
 
 })

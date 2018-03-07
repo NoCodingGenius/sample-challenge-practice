@@ -23,10 +23,13 @@ router.get('/users/:id/edit', (request, response, next) => {
 })
 
 router.put('/users/:id', (request, response, next) => {
-  const { id } = req.params
-  updateUser(req.body, id)
-  .then(() => {
-    response.json({REDIRECT_URL: `/users/${id}`})
+  const { full_name, email } = request.body
+  const id = request.params.id
+  console.log("????", request.body, request.params.id);
+  updateUser(full_name, email, id)
+  .then((updatedUser) => {
+    console.log("3333", updatedUser);
+    response.send(updatedUser)
   })
   .catch(next)
 })
